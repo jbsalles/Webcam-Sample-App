@@ -1,0 +1,5 @@
+<div id="video-container">
+    <video width="800" height="500" autoplay src="{{videosrc}}"></video>
+    <button id="startRecord" (click)="startRecord()" *ngIf="!isRecording" ><i class="fa fa-video-camera"></i></button>
+    <button id="stopRecord" (click)="stopRecord()" *ngIf="isRecording" ><i class="fa fa-stop"></i></button>
+</div>

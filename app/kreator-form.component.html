@@ -1,0 +1,33 @@
+<div id="form-container">
+<div class="container col-lg-4">
+    <h1 (click)="fireEvent()" >Kreate Kamera</h1>
+    <form #kreatorForm="ngForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" type="text" class="form-control"
+                   minlength="3"
+                   maxlength="100"
+                   required [(ngModel)]="model.name"
+                   ngControl="kreatorName">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="text" class="form-control"
+                   required
+                   maxlength="100"
+                   [(ngModel)]="model.email"
+                   ngControl="mailAddress"
+                   pattern="[a-z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)">
+        </div>
+        <div class="form-group">
+            <label for="youtubeId">Youtube Id</label>
+            <input  id="youtubeId" type="text" class="form-control" required ngControl="youtubeId" maxlength="30" [(ngModel)]="model.youtubeId" >
+        </div>
+
+        <button [disabled]="!kreatorForm.form.valid" type="submit" id="start" class="btn btn-default btn-lg center-block" (click)="onSubmit()">NEXT > </button>
+
+    </form>
+</div>
+    </div>
+
+<recorder-app></recorder-app>

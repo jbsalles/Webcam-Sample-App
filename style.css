@@ -1,0 +1,206 @@
+/* Master Styles */
+*{
+    outline: none;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100;
+    src: url(./fonts/NotoSansKR-Thin.woff2) format('woff2'),
+    url(./fonts/NotoSansKR-Thin.woff) format('woff'),
+    url(./fonts/NotoSansKR-Thin.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    src: url(./fonts/NotoSansKR-Light.woff2) format('woff2'),
+    url(./fonts/NotoSansKR-Light.woff) format('woff'),
+    url(./fonts/NotoSansKR-Light.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./fonts/NotoSansKR-Regular.woff2) format('woff2'),
+    url(./fonts/NotoSansKR-Regular.woff) format('woff'),
+    url(./fonts/NotoSansKR-Regular.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    src: url(./fonts/NotoSansKR-Medium.woff2) format('woff2'),
+    url(./fonts/NotoSansKR-Medium.woff) format('woff'),
+    url(./fonts/NotoSansKR-Medium.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    src: url(./fonts/NotoSansKR-Bold.woff2) format('woff2'),
+    url(./fonts/NotoSansKR-Bold.woff) format('woff'),
+    url(./fonts/NotoSansKR-Bold.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 900;
+    src: url(./fonts/NotoSansKR-Black.woff2) format('woff2'),
+    url(./fonts/NotoSansKR-Black.woff) format('woff'),
+    url(./fonts/NotoSansKR-Black.otf) format('opentype');}
+
+
+body,html,#wrapper{
+    padding:0px;
+    margin:0px;
+    height:100%;
+    width:100%;
+    overflow:hidden;
+    font-family: 'Noto Sans KR';
+}
+
+#wrapper{
+    width:400%;
+    position:absolute;
+    left:0px;
+    transition:left 0.4s linear;
+}
+
+#wrapper.step2{
+    left:-100%;
+}
+
+#wrapper.step3{
+    left:-200%;
+}
+#wrapper.step4{
+    left:-300%;
+}
+
+body{
+    background:#000 url(imgs/welcome_bg.jpg) center no-repeat;
+    background-size: 100% auto ;
+}
+h1 {
+    color: #369;
+    font-family: 'Noto Sans KR';
+    font-size: 0px;
+    background: url(/imgs/topLogo.png) no-repeat;
+    background-size: 200px auto;
+    width:200px;
+    height:100px;
+    margin:15% auto 0 auto;
+}
+h2, h3 {
+    color: #444;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+body, input[text], button {
+    color: #888;
+    font-size: 24px;
+}
+
+.form-control{
+    font-size: 18px;
+    padding: 20px 10px;
+}
+
+.form-group{
+    margin-bottom:1em;
+}
+label{
+    color:#fff;
+    font-size:16px;
+}
+.container{
+    margin: auto;
+    float: none;
+}
+
+.ng-valid[required] {
+    border: 5px solid #42A948; /* green */
+}
+
+.ng-invalid {
+    border: 5px solid #a94442; /* red */
+}
+
+#form-container,
+#video-container,
+#review-container,
+#thank-container{
+    float:left;
+    position:relative;
+    top:0px;
+    left:0px;
+    width:25%;
+    height:100%;
+}
+
+#thank-container h1 {
+    color: #fff;
+    font-family: 'Noto Sans KR';
+    font-size: 84px;
+    background: none;
+    width: 573px;
+    height: 100px;
+    margin: 16% auto 0 auto;
+    text-align: center;
+    text-shadow: 0 0 96px #fff;
+}
+
+
+#video-container.visible{
+    display:block;
+}
+
+#video-container video,#reviewVideo{
+    display:block;
+    position:relative;
+    margin:auto;
+    width: 640px;
+    top:7%;
+    height: 482px;
+    border: 5px solid #a94442;
+    border-radius:3px;
+}
+
+#startRecord:hover{
+    background: red;
+}
+
+#startRecord,#stopRecord{
+    display: block;
+    position: relative;
+    top: 54px;
+    margin: auto;
+    background: #a94442;
+    color: #fff;
+    border: 0px;
+    padding: 25px 25px;
+    border-radius: 42px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+#approve{
+    maring-top:70px;
+}
+
+nav.center-block button
+{
+    margin:0 10px;
+}
+
+nav.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 640px;
+    text-align: center;
+    margin-top: 90px;
+}
